@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>datatools-navbar legacy example</title>
+  <script src="../build/legacy.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  Navbar test:
+  <div id="target"></div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function(event) {
+  window.RenderDatatoolsNavbar({
+    elementId: 'target',
+    title : 'Conveyal GTFS Data Tools',
+    managerUrl: 'http://localhost:9000',
+    editorUrl: 'http://localhost:9001',
+    userAdminUrl: '#',
+    username: 'you',
+    loginHandler: function() {
+      console.log('login!');
+    },
+    logoutHandler: function() {
+      console.log('logout!');
+    },
+    resetPasswordHandler: function() {
+      console.log('reset!');
+    }
+  });
+});
+
+</script>
+
+</body>
+</html>

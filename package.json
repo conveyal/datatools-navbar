@@ -1,0 +1,49 @@
+{
+  "name": "datatools-navbar",
+  "version": "0.1.0",
+  "description": "Common navigation bar for the Conveyal transit data tools suite",
+  "main": "./build/index",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ]
+  },
+  "scripts": {
+    "prepublish": "babel index.js --out-dir build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "budo example.js --css https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css --live -- -t babelify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conveyal/datatools-navbar"
+  },
+  "author": "Conveyal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/conveyal/datatools-navbar/issues"
+  },
+  "homepage": "https://github.com/conveyal/datatools-navbar",
+  "devDependencies": {
+    "babel-core": "^6.3.26",
+    "babel-eslint": "^4.1.6",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "babel-preset-stage-0": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0",
+    "budo": "^8.0.2"
+  },
+  "dependencies": {
+    "react-bootstrap": "^0.28.1"
+  },
+  "peerDependencies": {
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  }
+}
